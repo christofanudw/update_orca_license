@@ -79,3 +79,4 @@ WshShell.SendKeys "{TAB}"
 WScript.Sleep 200
 WshShell.SendKeys licenseKey
 WScript.Sleep 300
+WshShell.SendKeys "{ENTER}"
