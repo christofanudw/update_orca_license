@@ -1,6 +1,6 @@
 Option Explicit
 
-Dim licenseKeyPath, fso, licenseKey, file, WshShell, started, t0, windowFound, clipboard
+Dim licenseKeyPath, fso, licenseKey, file, WshShell, started, t0, windowFound, clipboard, i
 
 Set fso = CreateObject("Scripting.FileSystemObject")
 
