@@ -1,10 +1,12 @@
 Option Explicit
 
-Dim licenseKeyPath, fso, licenseKey, file, WshShell, started, t0, windowFound, clipboard, i
+Dim licenseKeyPath, fso, licenseKey, file, WshShell, started, t0, windowFound, clipboard, i, j, kundenReferenz
 
 Set fso = CreateObject("Scripting.FileSystemObject")
 
 licenseKeyPath = "\\141.30.148.247\adminsh\ORCA.txt"
+
+kundenReferenz = "17297"
 
 ' WScript.Echo licenseKeyPath
 ' WScript.Echo "Pruefe Pfad: " & licenseKeyPath
@@ -58,8 +60,22 @@ WScript.Sleep 1000
 WshShell.AppActivate "ORCA Manager (Preview)"
 
 For i = 1 To 17
-        WshShell.SendKeys "{TAB}"
-        WScript.Sleep 100
+    WshShell.SendKeys "{TAB}"
+    WScript.Sleep 100
 Next
 
 WshShell.SendKeys " "   ' Leertaste = Klick
+
+WScript.Sleep 800
+
+For j = 1 to 4
+	WshShell.SendKeys "{TAB}"
+    WScript.Sleep 100
+Next
+
+WshShell.SendKeys kundenReferenz
+WScript.Sleep 250
+WshShell.SendKeys "{TAB}"
+WScript.Sleep 200
+WshShell.SendKeys licenseKey
+WScript.Sleep 300
