@@ -66,7 +66,7 @@ End If
 
 WshShell.AppActivate "ORCA Manager (Preview)"
 
-For i = 1 To 17
+For i = 1 To 16
     WshShell.SendKeys "{TAB}"
     WScript.Sleep 100
 Next
