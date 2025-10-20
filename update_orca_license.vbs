@@ -57,6 +57,13 @@ Loop While (Not windowFound) And (Timer - t0 < 60)
 
 WshShell.SendKeys "{ENTER}"
 WScript.Sleep 1000
+
+If WshShell.AppActivate("Orca Infocenter") Then
+    WScript.Sleep 300
+    WshShell.SendKeys "%{F4}"  ' Alt + F4 = Fenster schließen
+    WScript.Sleep 1000
+End If
+
 WshShell.AppActivate "ORCA Manager (Preview)"
 
 For i = 1 To 17
