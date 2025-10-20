@@ -73,7 +73,7 @@ Next
 
 WshShell.SendKeys " "   ' Leertaste = Klick
 
-WScript.Sleep 800
+WScript.Sleep 1000
 
 For j = 1 to 4
 	WshShell.SendKeys "{TAB}"
