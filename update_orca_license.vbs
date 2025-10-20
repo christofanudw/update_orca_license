@@ -1,6 +1,6 @@
 Option Explicit
 
-Dim licenseKeyPath, fso, licenseKey, file, WshShell, started, t0, windowFound
+Dim licenseKeyPath, fso, licenseKey, file, WshShell, started, t0, windowFound, clipboard
 
 Set fso = CreateObject("Scripting.FileSystemObject")
 
@@ -19,6 +19,9 @@ Set file = fso.OpenTextFile(licenseKeyPath, 1, False)
 licenseKey = Trim(file.ReadAll)
 file.close
 ' WScript.Echo "Lizenzschluessel: " & licenseKey
+
+Set clipboard = CreateObject("htmlfile")
+clipboard.ParentWindow.ClipboardData.SetData "text", licenseKey
 
 Set WshShell = WScript.CreateObject("WScript.Shell")
 WshShell.Run """C:\ProgramData\Microsoft\Windows\StartM~1\Programs\ORCASo~1\ORCASo~1.lnk"""
