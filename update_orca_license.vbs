@@ -53,12 +53,6 @@ Do
 
 Loop While (Not windowFound) And (Timer - t0 < 60)
 
-If windowFound Then
-    WScript.Echo "Nur noch 'Orca Manager (Preview)' ist offen."
-Else
-    WScript.Echo "FEHLER: Orca Manager (Preview) nicht gefunden oder Timeout."
-End If
-
 WshShell.SendKeys "{ENTER}"
 WScript.Sleep 1000
 WshShell.AppActivate "ORCA Manager (Preview)"
