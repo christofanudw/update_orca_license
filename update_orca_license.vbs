@@ -56,3 +56,10 @@ Loop While (Not windowFound) And (Timer - t0 < 60)
 WshShell.SendKeys "{ENTER}"
 WScript.Sleep 1000
 WshShell.AppActivate "ORCA Manager (Preview)"
+
+For i = 1 To 17
+        WshShell.SendKeys "{TAB}"
+        WScript.Sleep 100
+Next
+
+WshShell.SendKeys " "   ' Leertaste = Klick
